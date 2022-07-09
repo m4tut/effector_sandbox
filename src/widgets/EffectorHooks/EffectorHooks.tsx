@@ -1,13 +1,9 @@
 import { FC } from 'react';
 
 // Components
-import { UseStore } from '~entities/UseStore';
-
-// Styles
-import cn from 'classnames';
-import styles from './EffectorHooks.module.scss';
-import { UseStoreMap } from '~entities/UseStoreMap';
-import { UseList } from '~entities/UseList';
+import { UseStore } from '~widgets/EffectorHooks/hooks/UseStore';
+import { UseStoreMap } from '~widgets/EffectorHooks/hooks/UseStoreMap';
+import { UseList } from '~widgets/EffectorHooks/hooks/UseList';
 
 interface EffectorHooksProps {
   className?: string;
@@ -15,8 +11,8 @@ interface EffectorHooksProps {
 
 export const EffectorHooks: FC<EffectorHooksProps> = ({ className }) => {
   return (
-    <section className={cn(className, styles['hooks'])}>
-      <h2 className={cn(styles['hooks__title'])}>Effector hooks</h2>
+    <section className={className}>
+      <h2 className="mb-5 text-4xl font-semibold uppercase">hooks</h2>
       <UseStore />
       <UseStoreMap />
       <UseList />

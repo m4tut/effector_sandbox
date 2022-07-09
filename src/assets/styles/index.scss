@@ -1,6 +1,10 @@
 @import './lib/normalize.scss';
 @import './base/fonts.scss';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 *::after,
 *::before {
@@ -20,11 +24,6 @@ body,
   font-family: $font-default;
   font-size: $font-size-default;
   font-weight: $font-weight-default;
-}
-
-h1,
-h2 {
-  text-transform: uppercase;
 }
 
 img {
