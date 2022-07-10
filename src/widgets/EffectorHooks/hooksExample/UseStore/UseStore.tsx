@@ -3,7 +3,7 @@ import { ChangeEvent, FC, useState } from 'react';
 import { $stateNumber, $stateObj, $storeList, eventPlus, eventPop, eventPush, eventSetObj } from '../model';
 
 export const UseStore: FC = () => {
-  const couter = useStore($stateNumber);
+  const counter = useStore($stateNumber);
   const obj = useStore($stateObj);
   const list = useStore($storeList);
 
@@ -14,7 +14,7 @@ export const UseStore: FC = () => {
   const [value, setValue] = useState('dddd');
 
   return (
-    <section className="mb-10">
+    <section>
       <h3 className="mb-3 text-3xl">useStore</h3>
       <div className="grid gap-5 grid-cols-3">
         <div>
@@ -26,7 +26,7 @@ export const UseStore: FC = () => {
               Приметивные типы
             </a>
           </h4>
-          <div className="mb-4 font-semibold">{couter}</div>
+          <div className="mb-4 font-semibold">{counter}</div>
           <button
             className="border border-solid rounded border-gray-800 py-2 px-4"
             onClick={() => eventPlus()}
